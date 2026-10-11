@@ -1,36 +1,102 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📊 E2E Test Automation Analytics Dashboard
 
-## Getting Started
+Современный веб-дашборд для визуализации результатов автоматизированных E2E-тестов, запускаемых на базе **Playwright**, с аналитикой прогонов на графиках **Recharts**, детализацией упавших тестов, стектрейсами и логами шагов.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🚀 Технологический стек
+
+- **Фреймворк**: [Next.js](https://nextjs.org/) (App Router, React 19, TypeScript)
+- **Стилизация**: [Tailwind CSS v4](https://tailwindcss.com/) (Dark Mode UI, Glassmorphism)
+- **Тестирование**: [Playwright Test](https://playwright.dev/) (Chromium, параллельный запуск, JSON репортер)
+- **Визуализация данных**: [Recharts](https://recharts.org/) (Pie/Donut диаграмма распределения статусов, BarChart длительности тестов)
+- **Иконки**: [Lucide React](https://lucide.dev/)
+
+---
+
+## 🏛 Архитектура проекта
+
+```text
+├── app/
+│   ├── api/
+│   │   ├── test-results/route.ts  # Парсинг JSON-отчета Playwright и отдача метрик
+│   │   └── run-tests/route.ts     # Триггер запуска тестов из UI дашборда
+│   ├── globals.css                # Tailwind стили и глобальная палитра
+│   ├── layout.tsx                 # Главный шаблон приложения
+│   └── page.tsx                   # Клиентский дашборд с графиками, таблицей и логами
+├── e2e/
+│   └── sample.spec.ts             # Набор моковых E2E-тестов (passed + failed кейсы)
+├── playwright-report/
+│   └── test-results.json          # Генерируемый JSON-отчет прогона тестов
+├── types/
+│   └── test-report.ts             # TypeScript интерфейсы структуры отчета и тестов
+├── playwright.config.ts           # Конфигурация Playwright (JSON репортер)
+└── package.json
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🛠️ Возможности дашборда
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. **Интерактивные KPI**:
+   - Общее количество тестов.
+   - Количество успешных (Passed) и процент успешности (Pass Rate).
+   - Количество упавших (Failed) с подсветкой критических ошибок.
+   - Суммарная и индивидуальная длительность прогона.
 
-## Learn More
+2. **Графики Recharts**:
+   - **Donut Chart**: Соотношение Passed / Failed / Skipped тестов.
+   - **Bar Chart**: Время выполнения каждого тест-кейса в миллисекундах.
 
-To learn more about Next.js, take a look at the following resources:
+3. **Таблица и диагностика тестов**:
+   - Фильтрация по статусам (*All*, *Passed*, *Failed*) и динамический поиск.
+   - Раскрывающаяся строка с деталями:
+     - Очищенное от ANSI-кодов сообщение об ошибке.
+     - Точный сниппет упавшего кода с номерами строк.
+     - Полный Stack Trace.
+     - Шаги выполнения теста (Steps) и затраченное время.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+4. **Запуск тестов в один клик**:
+   - Кнопка **"Run All Tests"** вызывает эндпоинт `/api/run-tests`, выполняет `npx playwright test` и моментально обновляет графики.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 📦 Установка и запуск
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 1. Клонирование репозитория
+```bash
+git clone https://github.com/<your-username>/e2e-test-dashboard.git
+cd e2e-test-dashboard
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 2. Установка зависимостей
+```bash
+npm install
+```
+
+### 3. Установка браузеров Playwright
+```bash
+npx playwright install chromium
+```
+
+### 4. Запуск E2E-тестов для генерации первого отчета
+```bash
+npm run test:e2e
+```
+*(Один тест намеренно настроен на падение для демонстрации работы блока диагностики ошибок).*
+
+### 5. Запуск веб-дашборда
+```bash
+npm run dev
+```
+
+Откройте [http://localhost:3000](http://localhost:3000) в браузере.
+
+---
+
+## 🧪 Запуск тестов через Playwright UI
+
+Для интерактивной отладки тестов в UI-режиме:
+```bash
+npm run test:e2e:ui
+```

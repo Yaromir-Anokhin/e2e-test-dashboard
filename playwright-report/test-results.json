@@ -1,0 +1,298 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\3dmodel_app\\forgithub\\node_modules\\@playwright\\test\\cli.js",
+      "test"
+    ],
+    "configFile": "C:\\3dmodel_app\\forgithub\\playwright.config.ts",
+    "rootDir": "C:/3dmodel_app/forgithub/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/3dmodel_app/forgithub/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/3dmodel_app/forgithub/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\3dmodel_app\\forgithub\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "chromium",
+        "testDir": "C:\\3dmodel_app\\forgithub\\e2e",
+        "snapshotDir": "C:\\3dmodel_app\\forgithub\\e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 30000,
+        "use": {
+          "baseURL": "http://localhost:3000",
+          "trace": "on-first-retry",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.4 Safari/537.36",
+          "viewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "chromium"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "chromium"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "playwright-report/test-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "sample.spec.ts",
+      "file": "sample.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "E2E Demo Test Suite",
+          "file": "sample.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC01: Check home page header and title successfully",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 126,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-11T09:38:03.562Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b92766bcf73bd5c029a8-0720d0f4352c5fd6f879",
+              "file": "sample.spec.ts",
+              "line": 4,
+              "column": 7
+            },
+            {
+              "title": "TC02: Interactive counter button click works",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 152,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-11T09:38:03.898Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b92766bcf73bd5c029a8-522d284553ed5f740b1e",
+              "file": "sample.spec.ts",
+              "line": 24,
+              "column": 7
+            },
+            {
+              "title": "TC03: User profile form validation with valid email",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 126,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-11T09:38:04.059Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b92766bcf73bd5c029a8-8aa8b09cee0dd6aea1b2",
+              "file": "sample.spec.ts",
+              "line": 45,
+              "column": 7
+            },
+            {
+              "title": "TC04: Simulated checkout failure - Payment Gateway Timeout",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 1070,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('#status')\nExpected: \u001b[32m\"Payment \u001b[7mSucceeded\u001b[27m\"\u001b[39m\nReceived: \u001b[31m\"Payment \u001b[7mPending\u001b[27m\"\u001b[39m\nTimeout:  1000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" locator('#status') with timeout 1000ms\u001b[22m\n\u001b[2m  - waiting for locator('#status')\u001b[22m\n\u001b[2m    11 × locator resolved to <div id=\"status\">Payment Pending</div>\u001b[22m\n\u001b[2m       - unexpected value \"Payment Pending\"\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('#status')\nExpected: \u001b[32m\"Payment \u001b[7mSucceeded\u001b[27m\"\u001b[39m\nReceived: \u001b[31m\"Payment \u001b[7mPending\u001b[27m\"\u001b[39m\nTimeout:  1000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" locator('#status') with timeout 1000ms\u001b[22m\n\u001b[2m  - waiting for locator('#status')\u001b[22m\n\u001b[2m    11 × locator resolved to <div id=\"status\">Payment Pending</div>\u001b[22m\n\u001b[2m       - unexpected value \"Payment Pending\"\u001b[22m\n\n    at C:\\3dmodel_app\\forgithub\\e2e\\sample.spec.ts:75:43",
+                        "location": {
+                          "file": "C:\\3dmodel_app\\forgithub\\e2e\\sample.spec.ts",
+                          "column": 43,
+                          "line": 75
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 73 |\u001b[39m\n \u001b[90m 74 |\u001b[39m     \u001b[90m// Intentional failure to simulate failed E2E test\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 75 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#status'\u001b[39m))\u001b[33m.\u001b[39mtoHaveText(\u001b[32m'Payment Succeeded'\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m1000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 76 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 77 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 78 |\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\3dmodel_app\\forgithub\\e2e\\sample.spec.ts",
+                            "column": 43,
+                            "line": 75
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('#status')\nExpected: \u001b[32m\"Payment \u001b[7mSucceeded\u001b[27m\"\u001b[39m\nReceived: \u001b[31m\"Payment \u001b[7mPending\u001b[27m\"\u001b[39m\nTimeout:  1000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" locator('#status') with timeout 1000ms\u001b[22m\n\u001b[2m  - waiting for locator('#status')\u001b[22m\n\u001b[2m    11 × locator resolved to <div id=\"status\">Payment Pending</div>\u001b[22m\n\u001b[2m       - unexpected value \"Payment Pending\"\u001b[22m\n\n\n  73 |\n  74 |     // Intentional failure to simulate failed E2E test\n> 75 |     await expect(page.locator('#status')).toHaveText('Payment Succeeded', { timeout: 1000 });\n     |                                           ^\n  76 |   });\n  77 | });\n  78 |\n    at C:\\3dmodel_app\\forgithub\\e2e\\sample.spec.ts:75:43"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-11T09:38:04.194Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\3dmodel_app\\forgithub\\test-results\\sample-E2E-Demo-Test-Suite-e4206-e---Payment-Gateway-Timeout-chromium\\error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\3dmodel_app\\forgithub\\e2e\\sample.spec.ts",
+                        "column": 43,
+                        "line": 75
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "b92766bcf73bd5c029a8-f79338cc97a6da9d26a6",
+              "file": "sample.spec.ts",
+              "line": 64,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-11T09:38:03.109Z",
+    "duration": 2230.842,
+    "expected": 3,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}
